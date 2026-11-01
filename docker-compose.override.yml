@@ -1,0 +1,7 @@
+services:
+  scheduler:
+    volumes:
+      - ${CMS_PROJECT_PATH}:/usr/local/airflow/cms_project
+  dag-processor:
+    volumes:
+      - ${CMS_PROJECT_PATH}:/usr/local/airflow/cms_project
