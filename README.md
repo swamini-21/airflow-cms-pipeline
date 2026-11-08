@@ -2,9 +2,7 @@
 
 Airflow DAG that orchestrates the [CMS Medicare analysis](https://github.com/swamini-21/cms-medicare-analysis) project: ingestion, dbt build, then Soda data-quality checks, with a failure alert on every task.
 
-```
-ingest  ->  dbt_build  ->  soda_check
-```
+![Airflow DAG graph: successful run](docs/dag_graph.png)
 
 ## How it works
 
