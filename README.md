@@ -10,6 +10,7 @@ Airflow DAG that orchestrates the [CMS Medicare analysis](https://github.com/swa
 - `dbt_build`: runs `dbt build` (staging, marts, snapshot, tests) from a dbt virtualenv inside the Airflow image
 - `soda_check`: runs Soda Core checks from a Soda virtualenv inside the Airflow image
 - Retries: 2 per task, 2 minutes apart. After the final retry, an `ALERT:` line is written to the task log (`on_failure_callback`)
+- Tests: `tests/dags/test_dag_integrity.py` checks that every DAG imports without errors, is tagged, and has retries configured (run with `astro dev pytest`)
 
 ## Run it
 
